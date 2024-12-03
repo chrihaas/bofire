@@ -14,12 +14,19 @@ from bofire.data_models.api import (
     AnyPrior,
     AnyStrategy,
     AnySurrogate,
+    CandidatesProposal,
     Constraints,
     Domain,
     Inputs,
     Outputs,
 )
 from tests.bofire.data_models.specs.api import Spec
+
+
+def test_candidates_api_should_be_deserializable(candidates_api_spec: Spec):
+    obj = candidates_api_spec.obj()
+    deserialized = TypeAdapter(CandidatesProposal).validate_python(obj.model_dump())
+    assert obj == deserialized
 
 
 def test_dataframe_should_be_deserializable(dataframe_spec: Spec):

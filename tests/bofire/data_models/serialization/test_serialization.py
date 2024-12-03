@@ -1,6 +1,12 @@
 from tests.bofire.data_models.specs.api import Spec
 
 
+def test_candidates_api_should_be_serializable(candidates_api_spec: Spec):
+    spec = candidates_api_spec.typed_spec()
+    obj = candidates_api_spec.cls(**spec)
+    assert obj.model_dump() == spec
+
+
 def test_dataframe_should_be_serializable(dataframe_spec: Spec):
     spec = dataframe_spec.typed_spec()
     obj = dataframe_spec.cls(**spec)

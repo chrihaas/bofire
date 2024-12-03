@@ -8,6 +8,10 @@ def _invalidate(invalid_spec: InvalidSpec):
         invalid_spec.cls(**invalid_spec.typed_spec())
 
 
+def test_candidates_api_should_be_invalid(invalid_candidates_api_spec: InvalidSpec):
+    _invalidate(invalid_candidates_api_spec)
+
+
 def test_dataframe_should_be_invalid(invalid_dataframe_spec: InvalidSpec):
     _invalidate(invalid_dataframe_spec)
 

@@ -1,6 +1,7 @@
 from tests.bofire.data_models.specs.acquisition_functions import (
     specs as acquisition_functions,
 )
+from tests.bofire.data_models.specs.candidates_api import specs as candidates_api
 from tests.bofire.data_models.specs.conditions import specs as conditions
 from tests.bofire.data_models.specs.constraints import specs as constraints
 from tests.bofire.data_models.specs.constraints_container import (

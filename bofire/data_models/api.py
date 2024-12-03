@@ -3,6 +3,7 @@ from bofire.data_models.acquisition_functions.api import (
     AcquisitionFunction,
     AnyAcquisitionFunction,
 )
+from bofire.data_models.candidates_api.api import CandidatesProposal, CandidatesRequest
 from bofire.data_models.constraints.api import AnyConstraint, Constraint
 from bofire.data_models.dataframes.api import AnyDataFrame, AnyRow
 from bofire.data_models.domain.api import Constraints, Domain, Features, Inputs, Outputs
@@ -55,6 +56,8 @@ data_model_list = [
     Inputs,
     Outputs,
     Constraints,
+    CandidatesProposal,
+    CandidatesRequest,
 ]
 
 AnyThing = [model for models in data_model_list for model in unions.to_list(models)]

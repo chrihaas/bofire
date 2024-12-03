@@ -4,6 +4,11 @@ import tests.bofire.data_models.specs.api as specs
 
 
 # invalid fixtures
+@fixture(params=specs.candidates_api.invalids)
+def invalid_candidates_api_spec(request) -> specs.InvalidSpec:
+    return request.param
+
+
 @fixture(params=specs.dataframes.invalids)
 def invalid_dataframe_spec(request) -> specs.InvalidSpec:
     return request.param
@@ -95,6 +100,11 @@ def invalid_molfeatures_spec(request) -> specs.InvalidSpec:
 
 
 # valid fixtures
+@fixture(params=specs.candidates_api.valids)
+def candidates_api_spec(request) -> specs.Spec:
+    return request.param
+
+
 @fixture(params=specs.dataframes.valids)
 def dataframe_spec(request) -> specs.Spec:
     return request.param
