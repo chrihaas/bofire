@@ -66,7 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
 <link href="../../../docs/tutorials/benchmarks/001-Himmelblau.html" rel="next">
-<link href="../../../docs/tutorials/advanced_examples/transfer_learning_bo.html" rel="prev">
+<link href="../../../docs/tutorials/advanced_examples/octane_number.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -437,6 +437,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Classification Surrogate Tests</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../docs/tutorials/basic_examples/index_kernel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to index kernel and positive index kernel.</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -500,6 +506,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../../../docs/tutorials/advanced_examples/transfer_learning_bo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">generate lots of low fidelity data and a few high fidelity data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../docs/tutorials/advanced_examples/octane_number.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Predict Motor Octane Number of Hydrocarbon Mixtures</span></a>
   </div>
 </li>
       </ul>
@@ -583,6 +595,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../../../docs/tutorials/benchmarks/011-ActiveLearning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Active Learning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../docs/tutorials/benchmarks/012-engineered_features.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optimization with <code>ContinuousDescriptorInput</code>s and engineered Features</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../docs/tutorials/benchmarks/013-spherical_kernel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Spherical linear kernels for high dimensional BO</span></a>
   </div>
 </li>
       </ul>
@@ -689,6 +713,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#tnk" id="toc-tnk" class="nav-link" data-scroll-target="#tnk">010 - TNK</a></li>
   <li><a href="#active-learning" id="toc-active-learning" class="nav-link" data-scroll-target="#active-learning">011 - Active Learning</a></li>
   <li><a href="#active-learning-1" id="toc-active-learning-1" class="nav-link" data-scroll-target="#active-learning-1">012 - Active Learning</a></li>
+  <li><a href="#spherical-linear-kernels-for-high-dimensional-bo" id="toc-spherical-linear-kernels-for-high-dimensional-bo" class="nav-link" data-scroll-target="#spherical-linear-kernels-for-high-dimensional-bo">013 - Spherical linear kernels for high dimensional BO</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -769,6 +794,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="active-learning-1" class="level3">
 <h3 class="anchored" data-anchor-id="active-learning-1"><a href="../../../docs/tutorials/benchmarks/012-engineered_features.html">012 - Active Learning</a></h3>
 <p>Active learning strategies for experimental design.</p>
+</section>
+<section id="spherical-linear-kernels-for-high-dimensional-bo" class="level3">
+<h3 class="anchored" data-anchor-id="spherical-linear-kernels-for-high-dimensional-bo"><a href="../../../docs/tutorials/benchmarks/013-spherical_kernel.html">013 - Spherical linear kernels for high dimensional BO</a></h3>
+<p>High-dimensional Bayesian optimization using spherical linear kernels.</p>
 
 
 <!-- -->
@@ -1248,8 +1277,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../docs/tutorials/advanced_examples/transfer_learning_bo.html" class="pagination-link" aria-label="generate lots of low fidelity data and a few high fidelity data">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">generate lots of low fidelity data and a few high fidelity data</span>
+      <a href="../../../docs/tutorials/advanced_examples/octane_number.html" class="pagination-link" aria-label="Predict Motor Octane Number of Hydrocarbon Mixtures">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Predict Motor Octane Number of Hydrocarbon Mixtures</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -1302,7 +1331,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>Active learning strategies for experimental design.</span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">### [012 - Active Learning](012-engineered_features.qmd)</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>Active learning strategies for experimental design.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>Active learning strategies for experimental design.</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">### [013 - Spherical linear kernels for high dimensional BO](013-spherical_kernel.qmd)</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>High-dimensional Bayesian optimization using spherical linear kernels.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
