@@ -77,9 +77,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-b22cc5e3947e191bc3cd7ec0d5a99010.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../../site_libs/bootstrap/bootstrap-819bec620838c3ebd74f21573cae29b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../../site_libs/bootstrap/bootstrap-dark-dd96db0072a085c98b6ca2c306c14af0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../../site_libs/bootstrap/bootstrap-819bec620838c3ebd74f21573cae29b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-5c94bdfc28380462b9b13a0ca7c38cf7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-dark-4b6b7388376293a8f0c8984a8fa81281.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../../site_libs/bootstrap/bootstrap-5c94bdfc28380462b9b13a0ca7c38cf7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -427,7 +427,7 @@ window.Quarto = {
 
 
 
-<div id="dd0e0b6f" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:2.980124,&quot;end_time&quot;:&quot;2024-10-10T20:34:18.797038&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-10-10T20:34:15.816914&quot;,&quot;status&quot;:&quot;completed&quot;}}" data-tags="[]" data-execution_count="1">
+<div id="3e48a4b2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:2.980124,&quot;end_time&quot;:&quot;2024-10-10T20:34:18.797038&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-10-10T20:34:15.816914&quot;,&quot;status&quot;:&quot;completed&quot;}}" data-tags="[]" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -439,7 +439,7 @@ window.Quarto = {
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.benchmarks.api <span class="im">import</span> Ackley, Branin</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.data_models.acquisition_functions.api <span class="im">import</span> qLogEI</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.data_models.domain.api <span class="im">import</span> Domain, Inputs, Outputs</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.data_models.features.api <span class="im">import</span> ContinuousInput, ContinuousOutput, TaskInput</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.data_models.features.api <span class="im">import</span> ContinuousInput, ContinuousOutput, CategoricalTaskInput</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.data_models.objectives.api <span class="im">import</span> MaximizeObjective</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.data_models.strategies.api <span class="im">import</span> SoboStrategy</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.data_models.surrogates.api <span class="im">import</span> (</span>
@@ -448,7 +448,7 @@ window.Quarto = {
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    SingleTaskGPSurrogate,</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="75ce8ef9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:0.262804,&quot;end_time&quot;:&quot;2024-10-10T20:34:19.062415&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-10-10T20:34:18.799611&quot;,&quot;status&quot;:&quot;completed&quot;}}" data-tags="[]" data-execution_count="2">
+<div id="523daf85" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:0.262804,&quot;end_time&quot;:&quot;2024-10-10T20:34:19.062415&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-10-10T20:34:18.799611&quot;,&quot;status&quot;:&quot;completed&quot;}}" data-tags="[]" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>In this notebook we show how to use BoFire for the purposes of transfer learning Bayesian optimization. In particular, we assume we have a task <span class="math inline">\(f_2\)</span> with data that is relevant to the optimization of our current task <span class="math inline">\(f_1\)</span>. The procedure is simple, we fit a MultiTask GP to both data-sets, however only carry out the BO on <span class="math inline">\(f_1\)</span>, i.e., we optimize the acquisition functions on on the task <span class="math inline">\(f_1\)</span>.</p>
@@ -457,7 +457,7 @@ window.Quarto = {
 <p>And we will have data the second related task:</p>
 <p><span class="math display">\[ f_2 = 0.9 \sin(2 \pi x) + 0.2 \cos(3 \pi x) - 0.2 \]</span></p>
 <p>We begin by defining the functions, generating some data, and plotting it. We generate 15 data-points for Task 2 and just 4 data-points for Task 1, all the data-points in Task 1 will be in a restricted area of the space.</p>
-<div id="6fe0a0f9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:0.663407,&quot;end_time&quot;:&quot;2024-10-10T20:34:19.732148&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-10-10T20:34:19.068741&quot;,&quot;status&quot;:&quot;completed&quot;}}" data-tags="[]" data-execution_count="3">
+<div id="1f163184" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:0.663407,&quot;end_time&quot;:&quot;2024-10-10T20:34:19.732148&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-10-10T20:34:19.068741&quot;,&quot;status&quot;:&quot;completed&quot;}}" data-tags="[]" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> task_1_f(x):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.sin(x <span class="op">*</span> <span class="dv">2</span> <span class="op">*</span> np.pi)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -500,7 +500,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="transfer_learning_bo_files/figure-html/cell-4-output-1.png" width="534" height="356" class="figure-img"></p>
+<p><img src="transfer_learning_bo_files/figure-html/cell-4-output-1.png" width="535" height="356" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -510,11 +510,11 @@ window.Quarto = {
 <p>At first we will show to do inference with the model and see make predictions using multiple data-sets.</p>
 <p>We first set-up the model according to BoFire’s API, by defining the set of input and output features and the corresponding bounds, and create a surrogate data model:</p>
 <ul>
-<li>To define the task we choose the <code>TaskInput</code> feature, everything else follows standard BoFire procedure.</li>
+<li>To define the task we choose the <code>CategoricalTaskInput</code> feature, everything else follows standard BoFire procedure.</li>
 </ul>
-<div id="5d07d0c1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:0.006739,&quot;end_time&quot;:&quot;2024-10-10T20:34:19.750236&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-10-10T20:34:19.743497&quot;,&quot;status&quot;:&quot;completed&quot;}}" data-tags="[]" data-execution_count="4">
+<div id="2b11f529" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:0.006739,&quot;end_time&quot;:&quot;2024-10-10T20:34:19.750236&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-10-10T20:34:19.743497&quot;,&quot;status&quot;:&quot;completed&quot;}}" data-tags="[]" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set-up the task model with allowed variable as ["True"] for the target task and ["False"] for the other task</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>task_input <span class="op">=</span> TaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>])</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>task_input <span class="op">=</span> CategoricalTaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>])</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># define the input features</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>input_features <span class="op">=</span> [ContinuousInput(key<span class="op">=</span><span class="st">"x"</span>, bounds<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">1</span>)), task_input]</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
@@ -527,17 +527,19 @@ window.Quarto = {
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>surrogate_data <span class="op">=</span> MultiTaskGPSurrogate(inputs<span class="op">=</span>inputs, outputs<span class="op">=</span>outputs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>We map from the surrogate data into the surrogate model and fit the data.</p>
-<div id="9e41d32c" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:0.152004,&quot;end_time&quot;:&quot;2024-10-10T20:34:19.909174&quot;,&quot;exception&quot;:true,&quot;start_time&quot;:&quot;2024-10-10T20:34:19.757170&quot;,&quot;status&quot;:&quot;failed&quot;}}" data-tags="[]" data-execution_count="5">
+<div id="f86b06b7" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:0.152004,&quot;end_time&quot;:&quot;2024-10-10T20:34:19.909174&quot;,&quot;exception&quot;:true,&quot;start_time&quot;:&quot;2024-10-10T20:34:19.757170&quot;,&quot;status&quot;:&quot;failed&quot;}}" data-tags="[]" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>surrogate <span class="op">=</span> surrogates.<span class="bu">map</span>(surrogate_data)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>surrogate.fit(experiments)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/bofire/surrogates/botorch.py:181: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
-  torch.from_numpy(Y.values).to(**tkwargs),</code></pre>
+<pre><code>/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/bofire/surrogates/botorch.py:185: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
+  torch.from_numpy(Y.values).to(**tkwargs),
+/opt/hostedtoolcache/Python/3.12.13/x64/lib/python3.12/site-packages/linear_operator/utils/interpolation.py:66: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:760.)
+  summing_matrix = torch.sparse_coo_tensor(</code></pre>
 </div>
 </div>
 <p>Plot to see how we are able to predict outside of the region where there is data for Task 1, since we can use the data from Task 2 and the learnt correlations:</p>
-<div id="a358c788" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="6">
+<div id="3febca91" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># predict the high fidelity data</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>x_predict <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">101</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>y_predict <span class="op">=</span> surrogate.predict(</span>
@@ -578,7 +580,7 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="transfer_learning_bo_files/figure-html/cell-7-output-1.png" width="600" height="429" class="figure-img"></p>
+<p><img src="transfer_learning_bo_files/figure-html/cell-7-output-1.png" width="601" height="430" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -590,10 +592,10 @@ window.Quarto = {
 <ul>
 <li>For <code>TaskInput</code> we must set the variable <code>allowed</code> as a list, with each element in the list corresponding to one of the <code>categories</code> such that all auxiliary tasks have <code>False</code> and target task has <code>True</code>. For example, we have <code>categories = ["task_1, task_2"]</code> and the goal of our optimization is to optimize <code>task_1</code> therefore we set <code>allowed = [True, False]</code>:</li>
 </ul>
-<div id="f10ce323" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="7">
+<div id="46406db1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>input_features <span class="op">=</span> [</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    ContinuousInput(key<span class="op">=</span><span class="st">"x"</span>, bounds<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">1</span>)),</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    TaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>], allowed<span class="op">=</span>[<span class="va">True</span>, <span class="va">False</span>]),</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    CategoricalTaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>], allowed<span class="op">=</span>[<span class="va">True</span>, <span class="va">False</span>]),</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>]</span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>objective <span class="op">=</span> MaximizeObjective(w<span class="op">=</span><span class="dv">1</span>)</span>
@@ -622,7 +624,7 @@ window.Quarto = {
 <span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>sobo_strategy.tell(experiments)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>We can now generate experimental candidates:</p>
-<div id="84ad67bb" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="8">
+<div id="02f600c4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>candidates <span class="op">=</span> sobo_strategy.ask(<span class="dv">3</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>candidates</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -644,27 +646,27 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0</th>
-<td>0.167566</td>
+<td>0.236578</td>
 <td>task_1</td>
-<td>0.906201</td>
-<td>0.199354</td>
-<td>0.906201</td>
+<td>0.899631</td>
+<td>0.221515</td>
+<td>0.899631</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">1</th>
-<td>0.214459</td>
+<td>0.175519</td>
 <td>task_1</td>
-<td>0.904485</td>
-<td>0.193772</td>
-<td>0.904485</td>
+<td>0.897760</td>
+<td>0.234168</td>
+<td>0.897760</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">2</th>
-<td>0.189053</td>
+<td>0.205842</td>
 <td>task_1</td>
-<td>0.915081</td>
-<td>0.197050</td>
-<td>0.915081</td>
+<td>0.913202</td>
+<td>0.228957</td>
+<td>0.913202</td>
 </tr>
 </tbody>
 </table>
@@ -673,10 +675,10 @@ window.Quarto = {
 </div>
 </div>
 <p>If we instead wanted to optimize <code>task_2</code> instead of <code>task_1</code>, we simply change <code>allowed = [False, True]</code>:</p>
-<div id="42f9a7b0" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="9">
+<div id="2c70d75a" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>input_features <span class="op">=</span> [</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    ContinuousInput(key<span class="op">=</span><span class="st">"x"</span>, bounds<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">1</span>)),</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    TaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>], allowed<span class="op">=</span>[<span class="va">False</span>, <span class="va">True</span>]),</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    CategoricalTaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>], allowed<span class="op">=</span>[<span class="va">False</span>, <span class="va">True</span>]),</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>]</span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>objective <span class="op">=</span> MaximizeObjective(w<span class="op">=</span><span class="dv">1</span>)</span>
@@ -705,7 +707,7 @@ window.Quarto = {
 <span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>sobo_strategy.tell(experiments)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>We now obtain candidates for <code>task_2</code>:</p>
-<div id="8e75fba1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="10">
+<div id="8c60caf9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>candidate <span class="op">=</span> sobo_strategy.ask(<span class="dv">1</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>candidate</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -727,11 +729,11 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0</th>
-<td>0.197144</td>
+<td>0.19825</td>
 <td>task_2</td>
-<td>0.594692</td>
-<td>0.026345</td>
-<td>0.594692</td>
+<td>0.596839</td>
+<td>0.014503</td>
+<td>0.596839</td>
 </tr>
 </tbody>
 </table>
@@ -741,7 +743,7 @@ window.Quarto = {
 </div>
 <p>Let us now run a Bayesian optimization loop on the Branin benchmark to show the usefulness of transfer learning Bayesian optimization in a practical setting. We create a small data-set composed of the Branin benchmark itself, and a large one composed of the Branin function with a small amount of bias added by summing the Branin and Ackley functions.</p>
 <p>We begin by defining a function that creates random initial data-sets, and create as many data-sets as the number of runs we want to average over:</p>
-<div id="e43545fa" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="11">
+<div id="015a7f2b" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>benchmark <span class="op">=</span> Branin()</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>bias <span class="op">=</span> Ackley()</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -766,7 +768,7 @@ window.Quarto = {
 <span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> high_fidelity_data, experiments_joint</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="bc2157f9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="12">
+<div id="6667d38b" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>single_task_all_regrets <span class="op">=</span> []</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>SMOKE_TEST <span class="op">=</span> os.environ.get(<span class="st">"SMOKE_TEST"</span>)</span>
@@ -790,7 +792,7 @@ window.Quarto = {
 <span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    experiments_joint_datasets.append(experiments_joint)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Let us now run a Bayesian optimization loop only using the high-fidelity data:</p>
-<div id="01e15d01" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="13">
+<div id="ae21aa06" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> run <span class="kw">in</span> <span class="bu">range</span>(num_runs):</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    high_fidelity_data <span class="op">=</span> high_fidelity_datasets[run]</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -841,22 +843,22 @@ window.Quarto = {
 <span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a>    single_task_all_regrets.append(regrets_single_task)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s, Regret=33.1174]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.46it/s, Regret=33.1174]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.46it/s, Regret=33.1174]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.58it/s, Regret=33.1174]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.56it/s, Regret=33.1174]
-Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s, Regret=10.3825]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.78it/s, Regret=10.3825]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.78it/s, Regret=2.9286] Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.43it/s, Regret=2.9286]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.48it/s, Regret=2.9286]
-Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s, Regret=13.4896]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.26it/s, Regret=13.4896]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.26it/s, Regret=13.4896]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.03it/s, Regret=13.4896]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.06it/s, Regret=13.4896]
-Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s, Regret=25.4968]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.09it/s, Regret=25.4968]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.09it/s, Regret=0.3727] Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.49it/s, Regret=0.3727]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.42it/s, Regret=0.3727]
-Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s, Regret=6.4959]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.40it/s, Regret=6.4959]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.40it/s, Regret=6.4959]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.59it/s, Regret=6.4959]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.56it/s, Regret=6.4959]</code></pre>
+<pre><code>Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s, Regret=11.5581]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.24it/s, Regret=11.5581]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.24it/s, Regret=11.5581]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.37it/s, Regret=11.5581]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.35it/s, Regret=11.5581]
+Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s, Regret=33.4258]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.18it/s, Regret=33.4258]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.18it/s, Regret=22.2582]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.38it/s, Regret=22.2582]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.34it/s, Regret=22.2582]
+Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s, Regret=3.3599]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.23it/s, Regret=3.3599]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.23it/s, Regret=3.3599]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.31it/s, Regret=3.3599]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.29it/s, Regret=3.3599]
+Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s, Regret=2.2356]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.68it/s, Regret=2.2356]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.68it/s, Regret=0.0144]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.27it/s, Regret=0.0144]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.32it/s, Regret=0.0144]
+Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s, Regret=22.0919]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.03it/s, Regret=22.0919]Optimizing:  50%|█████     | 1/2 [00:00&lt;00:00,  2.03it/s, Regret=1.6773] Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.20it/s, Regret=1.6773]Optimizing: 100%|██████████| 2/2 [00:00&lt;00:00,  2.17it/s, Regret=1.6773]</code></pre>
 </div>
 </div>
 <p>We now repeat the experiment but using transfer learning BO:</p>
-<div id="12029b72" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="14">
+<div id="4a4a27ea" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>multitask_all_regrets <span class="op">=</span> []</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> run <span class="kw">in</span> <span class="bu">range</span>(num_runs):</span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    experiments_joint <span class="op">=</span> experiments_joint_datasets[run]</span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    input_features <span class="op">=</span> benchmark.domain.inputs.features <span class="op">+</span> [</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        TaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>], allowed<span class="op">=</span>[<span class="va">True</span>, <span class="va">False</span>]),</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        CategoricalTaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>], allowed<span class="op">=</span>[<span class="va">True</span>, <span class="va">False</span>]),</span>
 <span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    ]</span>
 <span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    inputs <span class="op">=</span> Inputs(features<span class="op">=</span>input_features)</span>
 <span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    outputs <span class="op">=</span> benchmark.domain.outputs</span>
@@ -912,15 +914,15 @@ Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          |
 <span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a>    multitask_all_regrets.append(regrets_transfer_learning)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:01&lt;?, ?it/s, Regret=0.3335]Optimizing:  50%|█████     | 1/2 [00:01&lt;00:01,  1.75s/it, Regret=0.3335]Optimizing:  50%|█████     | 1/2 [00:05&lt;00:01,  1.75s/it, Regret=0.3335]Optimizing: 100%|██████████| 2/2 [00:05&lt;00:00,  2.88s/it, Regret=0.3335]Optimizing: 100%|██████████| 2/2 [00:05&lt;00:00,  2.71s/it, Regret=0.3335]
-Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:01&lt;?, ?it/s, Regret=2.5975]Optimizing:  50%|█████     | 1/2 [00:01&lt;00:01,  1.48s/it, Regret=2.5975]Optimizing:  50%|█████     | 1/2 [00:03&lt;00:01,  1.48s/it, Regret=2.5975]Optimizing: 100%|██████████| 2/2 [00:03&lt;00:00,  1.84s/it, Regret=2.5975]Optimizing: 100%|██████████| 2/2 [00:03&lt;00:00,  1.79s/it, Regret=2.5975]
-Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:02&lt;?, ?it/s, Regret=2.1535]Optimizing:  50%|█████     | 1/2 [00:02&lt;00:02,  2.23s/it, Regret=2.1535]Optimizing:  50%|█████     | 1/2 [00:04&lt;00:02,  2.23s/it, Regret=2.1535]Optimizing: 100%|██████████| 2/2 [00:04&lt;00:00,  2.39s/it, Regret=2.1535]Optimizing: 100%|██████████| 2/2 [00:04&lt;00:00,  2.37s/it, Regret=2.1535]
-Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:01&lt;?, ?it/s, Regret=2.7177]Optimizing:  50%|█████     | 1/2 [00:01&lt;00:01,  1.84s/it, Regret=2.7177]Optimizing:  50%|█████     | 1/2 [00:04&lt;00:01,  1.84s/it, Regret=1.7583]Optimizing: 100%|██████████| 2/2 [00:04&lt;00:00,  2.46s/it, Regret=1.7583]Optimizing: 100%|██████████| 2/2 [00:04&lt;00:00,  2.37s/it, Regret=1.7583]
-Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:01&lt;?, ?it/s, Regret=6.4959]Optimizing:  50%|█████     | 1/2 [00:01&lt;00:01,  1.87s/it, Regret=6.4959]Optimizing:  50%|█████     | 1/2 [00:03&lt;00:01,  1.87s/it, Regret=0.1591]Optimizing: 100%|██████████| 2/2 [00:03&lt;00:00,  1.96s/it, Regret=0.1591]Optimizing: 100%|██████████| 2/2 [00:03&lt;00:00,  1.95s/it, Regret=0.1591]</code></pre>
+<pre><code>Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:01&lt;?, ?it/s, Regret=0.6970]Optimizing:  50%|█████     | 1/2 [00:01&lt;00:01,  1.68s/it, Regret=0.6970]Optimizing:  50%|█████     | 1/2 [00:03&lt;00:01,  1.68s/it, Regret=0.6970]Optimizing: 100%|██████████| 2/2 [00:03&lt;00:00,  1.82s/it, Regret=0.6970]Optimizing: 100%|██████████| 2/2 [00:03&lt;00:00,  1.80s/it, Regret=0.6970]
+Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:01&lt;?, ?it/s, Regret=0.0316]Optimizing:  50%|█████     | 1/2 [00:01&lt;00:01,  1.51s/it, Regret=0.0316]Optimizing:  50%|█████     | 1/2 [00:03&lt;00:01,  1.51s/it, Regret=0.0316]Optimizing: 100%|██████████| 2/2 [00:03&lt;00:00,  1.60s/it, Regret=0.0316]Optimizing: 100%|██████████| 2/2 [00:03&lt;00:00,  1.59s/it, Regret=0.0316]
+Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:02&lt;?, ?it/s, Regret=3.3599]Optimizing:  50%|█████     | 1/2 [00:02&lt;00:02,  2.12s/it, Regret=3.3599]Optimizing:  50%|█████     | 1/2 [00:04&lt;00:02,  2.12s/it, Regret=1.5584]Optimizing: 100%|██████████| 2/2 [00:04&lt;00:00,  2.50s/it, Regret=1.5584]Optimizing: 100%|██████████| 2/2 [00:04&lt;00:00,  2.44s/it, Regret=1.5584]
+Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:01&lt;?, ?it/s, Regret=1.5814]Optimizing:  50%|█████     | 1/2 [00:01&lt;00:01,  1.88s/it, Regret=1.5814]Optimizing:  50%|█████     | 1/2 [00:03&lt;00:01,  1.88s/it, Regret=1.5814]Optimizing: 100%|██████████| 2/2 [00:03&lt;00:00,  1.67s/it, Regret=1.5814]Optimizing: 100%|██████████| 2/2 [00:03&lt;00:00,  1.70s/it, Regret=1.5814]
+Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          | 0/2 [00:01&lt;?, ?it/s, Regret=0.0081]Optimizing:  50%|█████     | 1/2 [00:01&lt;00:01,  1.63s/it, Regret=0.0081]Optimizing:  50%|█████     | 1/2 [00:04&lt;00:01,  1.63s/it, Regret=0.0081]Optimizing: 100%|██████████| 2/2 [00:04&lt;00:00,  2.12s/it, Regret=0.0081]Optimizing: 100%|██████████| 2/2 [00:04&lt;00:00,  2.05s/it, Regret=0.0081]</code></pre>
 </div>
 </div>
 <p>We now plot the quantiles and median simple regret against iteration:</p>
-<div id="7711fec5" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="15">
+<div id="aa3b629b" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;papermill&quot;,&quot;value&quot;:{&quot;duration&quot;:null,&quot;end_time&quot;:null,&quot;exception&quot;:null,&quot;start_time&quot;:null,&quot;status&quot;:&quot;pending&quot;}}" data-tags="[]" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the results</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -977,7 +979,7 @@ Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          |
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="transfer_learning_bo_files/figure-html/cell-16-output-1.png" width="510" height="356" class="figure-img"></p>
+<p><img src="transfer_learning_bo_files/figure-html/cell-16-output-1.png" width="511" height="357" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1476,7 +1478,7 @@ Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          |
 <span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.benchmarks.api <span class="im">import</span> Ackley, Branin</span>
 <span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.data_models.acquisition_functions.api <span class="im">import</span> qLogEI</span>
 <span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.data_models.domain.api <span class="im">import</span> Domain, Inputs, Outputs</span>
-<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.data_models.features.api <span class="im">import</span> ContinuousInput, ContinuousOutput, TaskInput</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.data_models.features.api <span class="im">import</span> ContinuousInput, ContinuousOutput, CategoricalTaskInput</span>
 <span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.data_models.objectives.api <span class="im">import</span> MaximizeObjective</span>
 <span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.data_models.strategies.api <span class="im">import</span> SoboStrategy</span>
 <span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bofire.data_models.surrogates.api <span class="im">import</span> (</span>
@@ -1554,13 +1556,13 @@ Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          |
 <span id="cb19-100"><a href="#cb19-100" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-101"><a href="#cb19-101" aria-hidden="true" tabindex="-1"></a>We first set-up the model according to BoFire's API, by defining the set of input and output features and the corresponding bounds, and create a surrogate data model:</span>
 <span id="cb19-102"><a href="#cb19-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-103"><a href="#cb19-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>To define the task we choose the <span class="in">`TaskInput`</span> feature, everything else follows standard BoFire procedure.</span>
+<span id="cb19-103"><a href="#cb19-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>To define the task we choose the <span class="in">`CategoricalTaskInput`</span> feature, everything else follows standard BoFire procedure.</span>
 <span id="cb19-104"><a href="#cb19-104" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-107"><a href="#cb19-107" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
 <span id="cb19-108"><a href="#cb19-108" aria-hidden="true" tabindex="-1"></a><span class="co">#| papermill: {duration: 0.006739, end_time: '2024-10-10T20:34:19.750236', exception: false, start_time: '2024-10-10T20:34:19.743497', status: completed}</span></span>
 <span id="cb19-109"><a href="#cb19-109" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
 <span id="cb19-110"><a href="#cb19-110" aria-hidden="true" tabindex="-1"></a><span class="co"># set-up the task model with allowed variable as ["True"] for the target task and ["False"] for the other task</span></span>
-<span id="cb19-111"><a href="#cb19-111" aria-hidden="true" tabindex="-1"></a>task_input <span class="op">=</span> TaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>])</span>
+<span id="cb19-111"><a href="#cb19-111" aria-hidden="true" tabindex="-1"></a>task_input <span class="op">=</span> CategoricalTaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>])</span>
 <span id="cb19-112"><a href="#cb19-112" aria-hidden="true" tabindex="-1"></a><span class="co"># define the input features</span></span>
 <span id="cb19-113"><a href="#cb19-113" aria-hidden="true" tabindex="-1"></a>input_features <span class="op">=</span> [ContinuousInput(key<span class="op">=</span><span class="st">"x"</span>, bounds<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">1</span>)), task_input]</span>
 <span id="cb19-114"><a href="#cb19-114" aria-hidden="true" tabindex="-1"></a></span>
@@ -1639,7 +1641,7 @@ Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          |
 <span id="cb19-193"><a href="#cb19-193" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
 <span id="cb19-194"><a href="#cb19-194" aria-hidden="true" tabindex="-1"></a>input_features <span class="op">=</span> [</span>
 <span id="cb19-195"><a href="#cb19-195" aria-hidden="true" tabindex="-1"></a>    ContinuousInput(key<span class="op">=</span><span class="st">"x"</span>, bounds<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">1</span>)),</span>
-<span id="cb19-196"><a href="#cb19-196" aria-hidden="true" tabindex="-1"></a>    TaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>], allowed<span class="op">=</span>[<span class="va">True</span>, <span class="va">False</span>]),</span>
+<span id="cb19-196"><a href="#cb19-196" aria-hidden="true" tabindex="-1"></a>    CategoricalTaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>], allowed<span class="op">=</span>[<span class="va">True</span>, <span class="va">False</span>]),</span>
 <span id="cb19-197"><a href="#cb19-197" aria-hidden="true" tabindex="-1"></a>]</span>
 <span id="cb19-198"><a href="#cb19-198" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-199"><a href="#cb19-199" aria-hidden="true" tabindex="-1"></a>objective <span class="op">=</span> MaximizeObjective(w<span class="op">=</span><span class="dv">1</span>)</span>
@@ -1685,7 +1687,7 @@ Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          |
 <span id="cb19-243"><a href="#cb19-243" aria-hidden="true" tabindex="-1"></a><span class="co">#| tags: []</span></span>
 <span id="cb19-244"><a href="#cb19-244" aria-hidden="true" tabindex="-1"></a>input_features <span class="op">=</span> [</span>
 <span id="cb19-245"><a href="#cb19-245" aria-hidden="true" tabindex="-1"></a>    ContinuousInput(key<span class="op">=</span><span class="st">"x"</span>, bounds<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">1</span>)),</span>
-<span id="cb19-246"><a href="#cb19-246" aria-hidden="true" tabindex="-1"></a>    TaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>], allowed<span class="op">=</span>[<span class="va">False</span>, <span class="va">True</span>]),</span>
+<span id="cb19-246"><a href="#cb19-246" aria-hidden="true" tabindex="-1"></a>    CategoricalTaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>], allowed<span class="op">=</span>[<span class="va">False</span>, <span class="va">True</span>]),</span>
 <span id="cb19-247"><a href="#cb19-247" aria-hidden="true" tabindex="-1"></a>]</span>
 <span id="cb19-248"><a href="#cb19-248" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-249"><a href="#cb19-249" aria-hidden="true" tabindex="-1"></a>objective <span class="op">=</span> MaximizeObjective(w<span class="op">=</span><span class="dv">1</span>)</span>
@@ -1849,7 +1851,7 @@ Optimizing:   0%|          | 0/2 [00:00&lt;?, ?it/s]Optimizing:   0%|          |
 <span id="cb19-417"><a href="#cb19-417" aria-hidden="true" tabindex="-1"></a>    experiments_joint <span class="op">=</span> experiments_joint_datasets[run]</span>
 <span id="cb19-418"><a href="#cb19-418" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-419"><a href="#cb19-419" aria-hidden="true" tabindex="-1"></a>    input_features <span class="op">=</span> benchmark.domain.inputs.features <span class="op">+</span> [</span>
-<span id="cb19-420"><a href="#cb19-420" aria-hidden="true" tabindex="-1"></a>        TaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>], allowed<span class="op">=</span>[<span class="va">True</span>, <span class="va">False</span>]),</span>
+<span id="cb19-420"><a href="#cb19-420" aria-hidden="true" tabindex="-1"></a>        CategoricalTaskInput(key<span class="op">=</span><span class="st">"task"</span>, categories<span class="op">=</span>[<span class="st">"task_1"</span>, <span class="st">"task_2"</span>], allowed<span class="op">=</span>[<span class="va">True</span>, <span class="va">False</span>]),</span>
 <span id="cb19-421"><a href="#cb19-421" aria-hidden="true" tabindex="-1"></a>    ]</span>
 <span id="cb19-422"><a href="#cb19-422" aria-hidden="true" tabindex="-1"></a>    inputs <span class="op">=</span> Inputs(features<span class="op">=</span>input_features)</span>
 <span id="cb19-423"><a href="#cb19-423" aria-hidden="true" tabindex="-1"></a>    outputs <span class="op">=</span> benchmark.domain.outputs</span>
